@@ -7,6 +7,7 @@ import com.coroutines.data.api.ApiHelperImpl
 import com.coroutines.data.local.DatabaseBuilder
 import com.coroutines.data.local.DatabaseHelper
 import com.coroutines.learn.errorhandling.exceptionhandler.ExceptionHandlerViewModel
+import com.coroutines.learn.errorhandling.supervisor.IgnoreErrorAndContinueViewModel
 import com.coroutines.learn.retrofit.parallel.ParallelNetworkCallsViewModel
 import com.coroutines.learn.retrofit.series.SeriesNetworkCallsViewModel
 import com.coroutines.learn.retrofit.single.SingleNetworkCallViewModel
@@ -27,6 +28,11 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
 
         if(modelClass.isAssignableFrom(SingleNetworkCallViewModel::class.java)) {
             return SingleNetworkCallViewModel(apiHelper, dbHelper) as T
+        }
+
+        if(modelClass.isAssignableFrom(IgnoreErrorAndContinueViewModel::class.java)) {
+            return IgnoreErrorAndContinueViewModel(apiHelper, dbHelper) as T
+
         }
         throw IllegalArgumentException("Unknown class name")
     }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.coroutines.learn.errorhandling.exceptionhandler.ExceptionHandlerActivity
+import com.coroutines.learn.errorhandling.supervisor.IgnoreErrorAndContinueActivity
 import com.coroutines.learn.retrofit.parallel.ParallelNetworkCallsActivity
 import com.coroutines.learn.retrofit.series.SeriesNetworkCallsActivity
 import com.coroutines.learn.retrofit.single.SingleNetworkCallActivity
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startIgnoreErrorAndContinueActivity(view: View){
-
+        startActivity(Intent(this@MainActivity, IgnoreErrorAndContinueActivity::class.java))
     }
 
     fun startLongRunningTaskActivity(view: View) {
