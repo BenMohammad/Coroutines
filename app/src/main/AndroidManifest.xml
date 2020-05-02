@@ -21,6 +21,8 @@
         <activity android:name=".learn.errorhandling.exceptionhandler.ExceptionHandlerActivity"/>
         <activity android:name=".learn.retrofit.parallel.ParallelNetworkCallsActivity"/>
         <activity android:name=".learn.retrofit.series.SeriesNetworkCallsActivity"/>
+        <activity android:name=".learn.retrofit.single.SingleNetworkCallActivity"/>
+
     </application>
 
 </manifest>

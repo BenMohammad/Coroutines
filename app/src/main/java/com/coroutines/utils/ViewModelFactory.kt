@@ -9,6 +9,7 @@ import com.coroutines.data.local.DatabaseHelper
 import com.coroutines.learn.errorhandling.exceptionhandler.ExceptionHandlerViewModel
 import com.coroutines.learn.retrofit.parallel.ParallelNetworkCallsViewModel
 import com.coroutines.learn.retrofit.series.SeriesNetworkCallsViewModel
+import com.coroutines.learn.retrofit.single.SingleNetworkCallViewModel
 import java.lang.IllegalArgumentException
 
 class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: DatabaseHelper) : ViewModelProvider.Factory {
@@ -22,6 +23,10 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
         }
         if(modelClass.isAssignableFrom(SeriesNetworkCallsViewModel::class.java)) {
             return SeriesNetworkCallsViewModel(apiHelper, dbHelper) as T
+        }
+
+        if(modelClass.isAssignableFrom(SingleNetworkCallViewModel::class.java)) {
+            return SingleNetworkCallViewModel(apiHelper, dbHelper) as T
         }
         throw IllegalArgumentException("Unknown class name")
     }

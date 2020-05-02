@@ -7,6 +7,7 @@ import android.view.View
 import com.coroutines.learn.errorhandling.exceptionhandler.ExceptionHandlerActivity
 import com.coroutines.learn.retrofit.parallel.ParallelNetworkCallsActivity
 import com.coroutines.learn.retrofit.series.SeriesNetworkCallsActivity
+import com.coroutines.learn.retrofit.single.SingleNetworkCallActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startSingleNetworkCallActivity(view: View) {
-
+        startActivity(Intent(this@MainActivity, SingleNetworkCallActivity::class.java))
     }
 
     fun startSeriesNetworkCallsActivity(view: View){
