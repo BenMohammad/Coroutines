@@ -23,7 +23,7 @@
         <activity android:name=".learn.retrofit.series.SeriesNetworkCallsActivity"/>
         <activity android:name=".learn.retrofit.single.SingleNetworkCallActivity"/>
         <activity android:name=".learn.errorhandling.supervisor.IgnoreErrorAndContinueActivity"/>
-
+        <activity android:name=".learn.errorhandling.trycatch.TryCatchActivity"/>
     </application>
 
 </manifest>

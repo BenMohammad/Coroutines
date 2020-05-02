@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.coroutines.learn.errorhandling.exceptionhandler.ExceptionHandlerActivity
 import com.coroutines.learn.errorhandling.supervisor.IgnoreErrorAndContinueActivity
+import com.coroutines.learn.errorhandling.trycatch.TryCatchActivity
 import com.coroutines.learn.retrofit.parallel.ParallelNetworkCallsActivity
 import com.coroutines.learn.retrofit.series.SeriesNetworkCallsActivity
 import com.coroutines.learn.retrofit.single.SingleNetworkCallActivity
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startTryCatchActivity(view: View) {
-
+        startActivity(Intent(this@MainActivity, TryCatchActivity::class.java))
     }
 
     fun startExceptionHandlerActivity(view: View) {
