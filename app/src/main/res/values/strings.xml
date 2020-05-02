@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Coroutines</string>
+    <string name="single_network_call">Sinle Network Call</string>
+    <string name="series_network_calls">Series Network Call</string>
+    <string name="parallel_network_calls">Parallel Network call</string>
+    <string name="room_database">Room DB</string>
+    <string name="timeout">TIMEOUT</string>
+    <string name="try_catch_error">Try/Catch Error...</string>
+    <string name="exception_handler">Exception Handler</string>
+    <string name="ignore_error_and_continue">Ignore error and continue</string>
+    <string name="long_running_task">Long running task</string>
+    <string name="two_long_running_tasks">2 long running tasks</string>
+</resources>
