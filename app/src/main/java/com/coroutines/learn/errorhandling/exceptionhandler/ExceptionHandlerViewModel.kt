@@ -17,7 +17,7 @@ class ExceptionHandlerViewModel(
 
     private val users = MutableLiveData<Resource<List<ApiUser>>>()
 
-    private val exceptionhandler = CoroutineExceptionHandler{_, exception ->
+    private val exceptionHandler = CoroutineExceptionHandler{_, exception ->
         users.postValue(Resource.error("Something went wrong!!", null))
     }
 
@@ -26,7 +26,7 @@ class ExceptionHandlerViewModel(
     }
 
     private fun fetchUsers() {
-        viewModelScope.launch(exceptionhandler) {
+        viewModelScope.launch(exceptionHandler) {
             users.postValue(Resource.loading(null))
             val usersFromApi = apiHelper.getUsers()
             users.postValue(Resource.success(usersFromApi))
