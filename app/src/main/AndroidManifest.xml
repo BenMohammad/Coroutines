@@ -26,6 +26,8 @@
         <activity android:name=".learn.errorhandling.trycatch.TryCatchActivity"/>
         <activity android:name=".learn.room.RoomDBActivity"/>
         <activity android:name=".learn.task.onetask.LongRunningTaskActivity"/>
+        
+        <activity android:name=".learn.task.twotasks.TwoLongRunningTasksActivity"/>
     </application>
 
 </manifest>
