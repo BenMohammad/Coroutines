@@ -24,6 +24,7 @@
         <activity android:name=".learn.retrofit.single.SingleNetworkCallActivity"/>
         <activity android:name=".learn.errorhandling.supervisor.IgnoreErrorAndContinueActivity"/>
         <activity android:name=".learn.errorhandling.trycatch.TryCatchActivity"/>
+        <activity android:name=".learn.room.RoomDBActivity"/>
     </application>
 
 </manifest>

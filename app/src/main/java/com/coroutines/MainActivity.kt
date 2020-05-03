@@ -10,6 +10,7 @@ import com.coroutines.learn.errorhandling.trycatch.TryCatchActivity
 import com.coroutines.learn.retrofit.parallel.ParallelNetworkCallsActivity
 import com.coroutines.learn.retrofit.series.SeriesNetworkCallsActivity
 import com.coroutines.learn.retrofit.single.SingleNetworkCallActivity
+import com.coroutines.learn.room.RoomDBActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startRoomDatabaseActivity(view: View) {
-
+        startActivity(Intent(this@MainActivity, RoomDBActivity::class.java))
     }
 
     fun startTimeoutActivity(view: View) {
