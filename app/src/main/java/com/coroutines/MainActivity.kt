@@ -11,6 +11,7 @@ import com.coroutines.learn.retrofit.parallel.ParallelNetworkCallsActivity
 import com.coroutines.learn.retrofit.series.SeriesNetworkCallsActivity
 import com.coroutines.learn.retrofit.single.SingleNetworkCallActivity
 import com.coroutines.learn.room.RoomDBActivity
+import com.coroutines.learn.task.onetask.LongRunningTaskActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startLongRunningTaskActivity(view: View) {
-
+        startActivity(Intent(this@MainActivity, LongRunningTaskActivity::class.java))
     }
 
     fun startTwoLongRunningTasksActivity(view: View){

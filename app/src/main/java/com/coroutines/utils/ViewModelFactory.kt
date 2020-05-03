@@ -13,6 +13,7 @@ import com.coroutines.learn.retrofit.parallel.ParallelNetworkCallsViewModel
 import com.coroutines.learn.retrofit.series.SeriesNetworkCallsViewModel
 import com.coroutines.learn.retrofit.single.SingleNetworkCallViewModel
 import com.coroutines.learn.room.RoomDBViewModel
+import com.coroutines.learn.task.onetask.LongRunningTaskViewModel
 import java.lang.IllegalArgumentException
 
 class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: DatabaseHelper) : ViewModelProvider.Factory {
@@ -41,7 +42,10 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
         if(modelClass.isAssignableFrom(RoomDBViewModel::class.java)) {
             return RoomDBViewModel(apiHelper, dbHelper) as T
         }
+        if(modelClass.isAssignableFrom(LongRunningTaskViewModel::class.java)) {
+            return LongRunningTaskViewModel(apiHelper, dbHelper) as T
 
+        }
         throw IllegalArgumentException("Unknown class name")
     }
 }
