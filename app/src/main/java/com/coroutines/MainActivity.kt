@@ -12,6 +12,8 @@ import com.coroutines.learn.retrofit.series.SeriesNetworkCallsActivity
 import com.coroutines.learn.retrofit.single.SingleNetworkCallActivity
 import com.coroutines.learn.room.RoomDBActivity
 import com.coroutines.learn.task.onetask.LongRunningTaskActivity
+import com.coroutines.learn.task.twotasks.TwoLongRunningTasksActivity
+import com.coroutines.learn.timeout.TimeoutActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startTimeoutActivity(view: View) {
-
+        startActivity(Intent(this@MainActivity, TimeoutActivity::class.java))
     }
 
     fun startTryCatchActivity(view: View) {
@@ -59,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startTwoLongRunningTasksActivity(view: View){
-
+        startActivity(Intent(this@MainActivity, TwoLongRunningTasksActivity::class.java))
     }
 
 

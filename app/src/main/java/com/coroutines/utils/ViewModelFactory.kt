@@ -14,6 +14,8 @@ import com.coroutines.learn.retrofit.series.SeriesNetworkCallsViewModel
 import com.coroutines.learn.retrofit.single.SingleNetworkCallViewModel
 import com.coroutines.learn.room.RoomDBViewModel
 import com.coroutines.learn.task.onetask.LongRunningTaskViewModel
+import com.coroutines.learn.task.twotasks.TwoLongRunningTasksViewModel
+import com.coroutines.learn.timeout.TimeoutViewModel
 import java.lang.IllegalArgumentException
 
 class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: DatabaseHelper) : ViewModelProvider.Factory {
@@ -44,7 +46,12 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
         }
         if(modelClass.isAssignableFrom(LongRunningTaskViewModel::class.java)) {
             return LongRunningTaskViewModel(apiHelper, dbHelper) as T
-
+        }
+        if(modelClass.isAssignableFrom(TwoLongRunningTasksViewModel::class.java)) {
+            return TwoLongRunningTasksViewModel(apiHelper, dbHelper) as T
+        }
+        if(modelClass.isAssignableFrom(TimeoutViewModel::class.java)) {
+            return TimeoutViewModel(apiHelper, dbHelper) as T
         }
         throw IllegalArgumentException("Unknown class name")
     }
